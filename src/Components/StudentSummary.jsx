@@ -1,6 +1,19 @@
 
 
 function StudentsSummary() {
+  const total = students.length
+
+    const passed = students.filter(student => student.score >= 40).length
+
+    const avgScore =
+    total === 0
+        ? 0
+        : Math.round(
+              students.reduce(
+                  (sum, student) => sum + Number(student.score),
+                  0
+              ) / total
+          )
   return (
     <div className="w-200 flex items-center justify-between border border-[#256594]">
         <div className="flex flex-col border border-r-[#256594] flex-1 p-2 relative inline-block group cursor-pointer hover:bg-[#00FFE0]/10">
