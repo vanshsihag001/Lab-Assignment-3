@@ -28,7 +28,7 @@ function App() {
     <div className='w-full flex flex-col items-center gap-10 p-20 h-full bg-gray-900'>
     <Heading/>
     <AddStudent students={students} setStudents={setStudents}/>
-    <StudentsSummary/>
+    <StudentsSummary students={students}/>
     <AllDetails students={students} updateScore={updateScore}/>
     </div>
   )
